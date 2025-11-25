@@ -8,11 +8,11 @@
   * { margin:0; padding:0; box-sizing:border-box; }
   html, body {
     height: 100dvh;
-    background: #0a1628;
+    background: linear-gradient(135deg, #667eea, #764ba2);
     display: flex;
     justify-content: center;
     align-items: center;
-    overflow: hidden;
+    /* overflow: hidden; */
     touch-action: none;
     user-select: none;
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
@@ -23,14 +23,15 @@
     height: 94vmin;
     max-width: 600px;
     max-height: 600px;
+    margin-left: 20px;
   }
+
 
   .circle {
     position: absolute;
     width: 15%;
     height: 15%;
     background: white;
-    border: 5px solid #555;
     border-radius: 50%;
     display: flex;
     align-items: center;
@@ -48,7 +49,8 @@
 
   #ball {
     position: absolute;
-    top: 45%; left: 50%;
+    top: 45%; 
+    left: 50%;
     width: 17%;
     height: 17%;
     margin: -8.5% 0 0 -8.5%;
@@ -67,7 +69,7 @@
   /* 魔法棒固定在足球下方，可长按拖动 */
   #magicWand {
     position: absolute;
-    top: 58%;
+    top: 65%;
     left: 50%;
     transform: translateX(-50%);
     width: 72px; height: 72px;
@@ -117,6 +119,16 @@
 <body>
 
 <div id="game">
+  <!-- <div class="circle" data-id="0" style="left: 40%; top: 95%;"><span>0</span><div class="history"></div></div>
+  <div class="circle" data-id="1" style="left: 5%; top: 84%;"><span>1</span><div class="history"></div></div>
+  <div class="circle" data-id="2" style="left: 5%; top: 55%;"><span>2</span><div class="history"></div></div>
+  <div class="circle" data-id="3" style="left: 5%; top: 27%;"><span>3</span><div class="history"></div></div>
+  <div class="circle" data-id="4" style="left: 25%; top: 7%;"><span>4</span><div class="history"></div></div>
+  <div class="circle" data-id="5" style="left: 57%; top: 7%;"><span>5</span><div class="history"></div></div>
+  <div class="circle" data-id="6" style="left: 75%; top: 27%;"><span>6</span><div class="history"></div></div>
+  <div class="circle" data-id="7" style="left: 75%; top: 55%;"><span>7</span><div class="history"></div></div>
+  <div class="circle" data-id="8" style="left: 75%; top: 84%;"><span>8</span><div class="history"></div></div> -->
+
   <div class="circle" data-id="0"><span>0</span><div class="history"></div></div>
   <div class="circle" data-id="1"><span>0</span><div class="history"></div></div>
   <div class="circle" data-id="2"><span>0</span><div class="history"></div></div>
@@ -136,9 +148,9 @@
 
 <script>
 // 9个圆完美环形布局（写死位置）
-const centerX = 47, centerY = 50, radius = 35;
+const centerX = 47, centerY = 50, radius = 45;
 document.querySelectorAll('.circle').forEach((c, i) => {
-  const angle = i * 40 - 90;
+  const angle = i * 40 + 90 ;
   const rad = angle * Math.PI / 180;
   const left = centerX + radius * Math.cos(rad);
   const top  = centerY + radius * Math.sin(rad);
