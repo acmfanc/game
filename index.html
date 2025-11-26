@@ -23,7 +23,7 @@
     height: 94vmin;
     max-width: 600px;
     max-height: 600px;
-    margin-left: 20px;
+    margin-left: 75px;
   }
 
 
@@ -50,7 +50,7 @@
   #ball {
     position: absolute;
     top: 45%; 
-    left: 48%;
+    left: 40%;
     width: 17%;
     height: 17%;
     margin: -8.5% 0 0 -8.5%;
@@ -70,7 +70,7 @@
   #magicWand {
     position: absolute;
     top: 62%;
-    left: 47.5%;
+    left: 40%;
     transform: translateX(-50%);
     width: 55px; height: 55px;
     background: gold url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="black"><path d="M19 3l-2.5 2.5L18 7l-1.5 1.5L19 11l2.5-2.5L20 7l1.5-1.5L19 3zM2 6l3 3 10 10 3-3L8 6 2 6z"/></svg>') center/70% no-repeat;
@@ -121,17 +121,17 @@
 <body>
 
 <div id="game">
-  <!-- <div class="circle" data-id="0" style="left: 40%; top: 95%;"><span>0</span><div class="history"></div></div>
-  <div class="circle" data-id="1" style="left: 5%; top: 84%;"><span>1</span><div class="history"></div></div>
-  <div class="circle" data-id="2" style="left: 5%; top: 55%;"><span>2</span><div class="history"></div></div>
-  <div class="circle" data-id="3" style="left: 5%; top: 27%;"><span>3</span><div class="history"></div></div>
-  <div class="circle" data-id="4" style="left: 25%; top: 7%;"><span>4</span><div class="history"></div></div>
-  <div class="circle" data-id="5" style="left: 57%; top: 7%;"><span>5</span><div class="history"></div></div>
-  <div class="circle" data-id="6" style="left: 75%; top: 27%;"><span>6</span><div class="history"></div></div>
-  <div class="circle" data-id="7" style="left: 75%; top: 55%;"><span>7</span><div class="history"></div></div>
-  <div class="circle" data-id="8" style="left: 75%; top: 84%;"><span>8</span><div class="history"></div></div> -->
+  <div class="circle" data-id="0" style="left: 40%; top: 95%;"><span>0</span><div class="history"></div></div>
+  <div class="circle" data-id="1" style="left: 5%; top: 84%;"><span>0</span><div class="history"></div></div>
+  <div class="circle" data-id="2" style="left: 5%; top: 55%;"><span>0</span><div class="history"></div></div>
+  <div class="circle" data-id="3" style="left: 5%; top: 27%;"><span>0</span><div class="history"></div></div>
+  <div class="circle" data-id="4" style="left: 25%; top: 7%;"><span>0</span><div class="history"></div></div>
+  <div class="circle" data-id="5" style="left: 57%; top: 7%;"><span>0</span><div class="history"></div></div>
+  <div class="circle" data-id="6" style="left: 75%; top: 27%;"><span>0</span><div class="history"></div></div>
+  <div class="circle" data-id="7" style="left: 75%; top: 55%;"><span>0</span><div class="history"></div></div>
+  <div class="circle" data-id="8" style="left: 75%; top: 84%;"><span>0</span><div class="history"></div></div>
 
-  <div class="circle" data-id="0"><span>0</span><div class="history"></div></div>
+  <!--<div class="circle" data-id="0"><span>0</span><div class="history"></div></div>
   <div class="circle" data-id="1"><span>0</span><div class="history"></div></div>
   <div class="circle" data-id="2"><span>0</span><div class="history"></div></div>
   <div class="circle" data-id="3"><span>0</span><div class="history"></div></div>
@@ -139,7 +139,7 @@
   <div class="circle" data-id="5"><span>0</span><div class="history"></div></div>
   <div class="circle" data-id="6"><span>0</span><div class="history"></div></div>
   <div class="circle" data-id="7"><span>0</span><div class="history"></div></div>
-  <div class="circle" data-id="8"><span>0</span><div class="history"></div></div>
+  <div class="circle" data-id="8"><span>0</span><div class="history"></div></div> -->
 
   <div id="ball">&nbsp</div>
   <div id="magicWand"></div>
@@ -154,17 +154,17 @@ const centerX = 47, centerY = 50, radius = 45;
 document.querySelectorAll('.circle').forEach((c, i) => {
   const angle = i * 40 + 90 ;
   const rad = angle * Math.PI / 180;
-  const left = centerX + radius * Math.cos(rad);
-  const top  = centerY + radius * Math.sin(rad);
-  c.style.left = left + '%';
-  c.style.top  = top + '%';
-  if (i == 2) {
-    c.style.left = '5%';
-    c.style.top = '56%';
-  } else if (i == 7) {
-    c.style.left = '90%';
-    c.style.top = '56%';
-  }
+  // const left = centerX + radius * Math.cos(rad);
+  // const top  = centerY + radius * Math.sin(rad);
+  // c.style.left = left + '%';
+  // c.style.top  = top + '%';
+  // if (i == 2) {
+  //   c.style.left = '5%';
+  //   c.style.top = '56%';
+  // } else if (i == 7) {
+  //   c.style.left = '90%';
+  //   c.style.top = '56%';
+  // }
   c.style.transform = 'translate(-50%, -50%)';
 });
 
