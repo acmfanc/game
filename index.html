@@ -185,7 +185,7 @@ circles.forEach((c, i) => {
   };
   c.addEventListener('click', inc);
   c.addEventListener('touchstart', e=>{e.preventDefault(); inc(e);});
-  c._updateHist = () => hist.textContent = histories[i].slice(-8).join(', ');
+  c._updateHist = () => hist.textContent = histories[i].slice(-8).reverse().join(', ');
 });
 
 // 足球拖拽归零
